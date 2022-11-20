@@ -101,6 +101,10 @@ namespace PiskvorkyApp
 					button1.BackgroundImage = null;
 				}
 			}
+
+			Label lblHrac = (Label)Controls.Find("lblHrac", false).FirstOrDefault();
+			TextBox TextHrac1 = (TextBox)Controls.Find("txtHrac1", false).FirstOrDefault();
+			lblHrac.Text = TextHrac1.Text;
 		}
 
 		private void btSave_Click(object sender, EventArgs e)
@@ -164,7 +168,7 @@ namespace PiskvorkyApp
 				clickedButton.BackColor = Color.Red;
 				clickedButton.Enabled = false;
 				clickedButton.BackgroundImage = Image.FromFile
-				(@"C:\Users\matej\Documents\programy ze studia\PiskvorkyApp\PiskvorkyApp\bin\Debug\krizek_50x50.jpg");
+				(@".\krizek_50x50.jpg");
 				CheckWin(indexRada, indexSloupec, smer.vertikalne, 1);
 				CheckWin(indexRada, indexSloupec, smer.horizontalne, 1);
 				CheckWin(indexRada, indexSloupec, smer.diagonalneZPrava, 1);
@@ -179,7 +183,7 @@ namespace PiskvorkyApp
 				clickedButton.BackColor = Color.Blue;
 				clickedButton.Enabled = false;
 				clickedButton.BackgroundImage = Image.FromFile
-				(@"C:\Users\matej\Documents\programy ze studia\PiskvorkyApp\PiskvorkyApp\bin\Debug\kolecko_50x50.jpg");
+				(@".\kolecko_50x50.jpg");
 				CheckWin(indexRada, indexSloupec, smer.vertikalne, 2);
 				CheckWin(indexRada, indexSloupec, smer.horizontalne, 2);
 				CheckWin(indexRada, indexSloupec, smer.diagonalneZPrava, 2);
